@@ -9,7 +9,7 @@
     "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
   },
   "keywords": [],
-  "author": "",
+  "author": "Three Thanwarin",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.18.0",
