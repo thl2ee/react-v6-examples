@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
-import Pet from "./Pet";
-// eslint-disable-next-line import/namespace
+import Results from "./Results";
 import useBreedList from "./useBreedList";
 
 const ANIMALS = ["bird", "dog", "rabbit", "cat", "hourse"];
 
 const SearchParams = () => {
   const [location, setLocation] = useState("Seattle, WA");
-  // const locationTuple = useState("Bangkok, Thailand");
-  // const location = locationTuple[0];
-  // const setLocation = locationTuple[1];
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
@@ -20,10 +16,6 @@ const SearchParams = () => {
     requestPets();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => alert("hi", 3000));
-  // }, [animal]);
 
   async function requestPets() {
     const res = await fetch(
@@ -93,16 +85,7 @@ const SearchParams = () => {
         </label>
         <button>Submit!</button>
       </form>
-      {
-        pets.map(pet => (
-          <Pet
-            name={pet.name}
-            animal={pet.animal}
-            breed={pet.breed}
-            key={pet.id}
-          ></Pet>
-        ))
-      }
+      <Results pets={pets}></Results>
     </div>
   )
 }
