@@ -4,7 +4,8 @@
       "@babel/preset-react",
       {
         "runtime": "automatic"
-      }
+      },
+      "@babel/preset-env"
     ],
     [
       "env",
@@ -14,5 +15,6 @@
         }
       }
     ]
-  ]
+  ],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
 }
