@@ -5,7 +5,7 @@ import useBreedList from "./useBreedList";
 const ANIMALS = ["bird", "dog", "rabbit", "cat", "hourse"];
 
 const SearchParams = () => {
-  const [location, setLocation] = useState("Seattle, WA");
+  const [location, setLocation] = useState("MN");
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
